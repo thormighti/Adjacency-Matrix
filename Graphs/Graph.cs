@@ -25,10 +25,10 @@ namespace Graphs
             matrix[numVerts] = new Vertex(label);
             numVerts++;
         }
-        public void AddEdge(int source, int destination)
+        public void AddEdge(int source, int destination,int weight)
         {
-            adjMatrix[source, destination] = 1;
-            adjMatrix[destination, source] = 1;
+            adjMatrix[source, destination] = weight;
+            adjMatrix[destination, source] = weight;
         }
         public void show()
         {
@@ -50,9 +50,9 @@ namespace Graphs
                 Console.Write($"Vertex {i} is connected to  ");
                 for (int j = 0; j < adjMatrix.GetLength(1); j++)
                 {
-                    if (adjMatrix[i, j] == 1)
+                    if (adjMatrix[i, j] != 0)
                     {
-                        Console.Write(j + " ");
+                        Console.Write( $" {j} with weight of {adjMatrix[i,j]}   ");
                     }
                 }
                 Console.WriteLine();

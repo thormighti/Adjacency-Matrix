@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+// This guy is almost crab
 namespace AdjacencyMatrix
 {
     class GraphAdjacency
@@ -38,16 +38,14 @@ namespace AdjacencyMatrix
             {
                 for (int j = 0; j < list.Length; j++)
                 {
-                    if (adj[i, j])
+                    if (list[i].Count > 0)
                     {
-                        Console.Write(1.ToString() + " ");
-                    }
-                    else
-                    {
-                        Console.Write(6.ToString() + " ");
+                        foreach (var item in list[i])
+                        {
+                            Console.Write(item);
+                        }
                     }
                 }
-               
                 Console.WriteLine();
             }
         }   

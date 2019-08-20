@@ -10,6 +10,8 @@ namespace AdjacencyMatrix
     {
         static void Main(string[] args)
         {
+            Tuple<long, int> pii;
+            
             GraphAdjacency graph = new GraphAdjacency(10);
             graph.AddEdge(3, 4);
             graph.AddEdge(1,2);
